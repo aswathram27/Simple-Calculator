@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Calculator</title>
+    <style>
+        /* Basic styling to make the calculator look decent */
+        .calculator {
+            width: 400px;
+            height:500px;
+            margin-left: 400px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 100px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgb(0, 0, 0);
+            border-color: rgb(177, 178, 201);
+            border-style:inset ;
+            border-width: 3px;
+            border-radius: 30px;
+            align-content:center;
+        }
+        .calculator input {
+            width: 100%;
+            height: 40px;
+            text-align: right;
+            padding: 10px;
+            font-size: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        .calculator button {
+            width: 80px;
+            height: 40px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f4f4f4;
+            margin: 5px 0;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        .calculator button.operator {
+            background-color: #e0e0e0;
+        }
+        .gh{
+            align-content: center;
+            background-color: rgb(250, 250, 250);
+            text-align:center;
+            font-size: 40px;
+            text-justify: auto;
+            width: 400px;
+            border-radius: 20px;
+            margin-top: 80px;
+            height: 100px;
+            margin-left: 400px;
+         
+
+        }
+        #jk{
+            margin-left:5px;
+            color: #000000;
+            background-color: rgb(226, 241, 241);
+            font-size: 19px;
+            height: 60px;
+            margin-right: 7px;
+            
+        
+        }
+        #kn{
+            color: black;
+            background-color: rgb(226,241,241);
+            height: 60px;
+            margin-right: 5px;
+            margin-left: 13px;
+        }
+        body{
+            background-image: url('https://img.freepik.com/premium-photo/top-view-blue-calculator-notepad-color-background_260672-4055.jpg');
+            background-repeat:no-repeat ;
+            background-size: 100%;
+            height:100vh;
+            width:100vw;
+            background-size: cover;
+            background-position: center;
+           
+
+        }
+    </style>
+</head>
+<body >
+    <header>
+        <p class="gh"><b>Simple Calculator</b></p>
+    </header>
+    <div class="calculator">
+        <input type="text" id="display"  disabled style="background-color: rgb(255, 255, 255);height: 60px;">
+        <div>
+            <button onclick="document.getElementById('display').value += '7'" id="kn">7</button>
+            <button onclick="document.getElementById('display').value += '8'" id="jk">8</button>
+            <button onclick="document.getElementById('display').value += '9'" id="jk">9</button>
+            <button class="operator" onclick="document.getElementById('display').value += '/'" id="jk">/</button>
+        </div>
+        <div>
+            <button onclick="document.getElementById('display').value += '4'" id="kn">4</button>
+            <button onclick="document.getElementById('display').value += '5'" id="jk">5</button>
+            <button onclick="document.getElementById('display').value += '6'" id="jk">6</button>
+            <button class="operator" onclick="document.getElementById('display').value += '*'" id="jk">*</button>
+        </div>
+        <div>
+            <button onclick="document.getElementById('display').value += '1'" id="kn">1</button>
+            <button onclick="document.getElementById('display').value += '2'" id="jk">2</button>
+            <button onclick="document.getElementById('display').value += '3'" id="jk">3</button>
+            <button class="operator" onclick="document.getElementById('display').value += '-'" id="jk">-</button>
+        </div>
+        <div>
+            <button onclick="document.getElementById('display').value += '0'" id="kn">0</button>
+            <button onclick="document.getElementById('display').value += '.'" id="jk">.</button>
+            <button onclick="document.getElementById('display').value = eval(document.getElementById('display').value)" id="jk">=</button>
+            <button class="operator" onclick="document.getElementById('display').value += '+'" id="jk">+</button>
+        </div>
+        <div>
+            <button onclick="document.getElementById('display').value = ''" style="margin-left: 155px; background-color: rgb(252, 151, 80);margin-top: 20px;">C</button>
+        </div>
+    </div>
+</body>
+</html>
